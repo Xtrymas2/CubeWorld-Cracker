@@ -27,7 +27,7 @@ patchbytes =[
             0xC6, 0x45, 0xFC, 0x3D,                   #mov byte prt [ebp-04], 3D
             ]
 
-cubeFile = input('EXAMPLE: C:\\Program Files (x86)\\Cube World\\CubeLauncher.exe\nEnter path to Cube.exe: ')
+cubeFile = input('EXAMPLE: C:\\Program Files (x86)\\Cube World\\Cube.exe\nEnter path to Cube.exe: ')
 try:
     cubeh = open(cubeFile, 'rb')
 except:
