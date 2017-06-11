@@ -56,6 +56,6 @@ int main()
     outfileh.close();
 
     cout << outfilename << " has been created";
-
+    cin;
     return 0;
 }
