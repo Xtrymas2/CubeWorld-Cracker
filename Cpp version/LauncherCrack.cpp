@@ -13,36 +13,35 @@ int get_file_size(string filename) {
 
 int main()
 {
-    cout << "EXAMPLE: C:\\Program Files (x86)\\Cube World\\CubeLauncher.exe\nEnter path to launcher: ";
-    string launchern;
-    getline(cin, launchern);
+    cout << "EXAMPLE: C:\\Program Files (x86)\\Cube World\\Cube.exe\nEnter path to Cube.exe: ";
+    string cuben;
+    getline(cin, cuben);
 
-    ifstream launcherh(launchern.c_str(), ios_base:: in | ios_base::binary);
+    ifstream cubeh(cuben.c_str(), ios_base:: in | ios_base::binary);
 
-    if(!launcherh){
-        cout << "Unable to open " << launchern;
+    if(!cubeh){
+        cout << "Unable to open " << cuben;
         cin;
         return 1;
     }
 
-    int launcherSize = get_file_size(launchern);
-    if (launcherSize != 163840){
-        cout << "This is not the latest version of the launcher.\n";
-        cout << "You can download it from:\n";
-        cout << "https://d1bcl7tdsf48aa.cloudfront.net/download/CubeSetup3.exe";
+    int cubeSize = get_file_size(cuben);
+    if (cubeSize != 3885568){
+        cout << "This is not the latest version of Cube World.\n";
+        cout << "If you are trying to use this on an older version, try the python version of this program.\n";
+        cout << "The python script should work on any version.\n";
+        //I'm mentally challenged and I wish I was taught C++ in college instead of Python
         cin;
         return 1;
     }
 
-    int pos = 0;
-    char * launcherc =  new char[launcherSize];
-    while (pos < launcherSize){
-        launcherh.get(launcherc[pos]);
-        pos++;
+    char * cubec =  new char[cubeSize];
+    for (int pos = 0; pos < cubeSize; pos++){
+        cubeh.get(cubec[pos]);
     }
-    launcherh.close();
+    cubeh.close();
 
-    string outfilename = "CubeLauncher_patched.exe";
+    string outfilename = "Cube_patched.exe";
     ofstream outfileh(outfilename.c_str(), ios_base::out | ios_base::binary);
     if (!outfileh){
         cout << "Unable to open " << outfilename;
@@ -50,12 +49,15 @@ int main()
         return 1;
     }
 
-    launcherc[0x14B46] = 0xEB; //switch jnz to jmp
+    for(int i = 0x5A18D; i < 0x5A193; i++){
+        cubec[i]=0x90;//nop some bytes and stuff to make things good
+    }
 
-    outfileh.write((char *) launcherc, pos);
+    outfileh.write((char *) cubec, cubeSize);
     outfileh.close();
 
     cout << outfilename << " has been created";
     cin;
+
     return 0;
 }
