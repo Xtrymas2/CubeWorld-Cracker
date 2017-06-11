@@ -27,11 +27,12 @@ patchbytes =[
             0xC6, 0x45, 0xFC, 0x3D,                   #mov byte prt [ebp-04], 3D
             ]
 
-cubeFile = input('Enter path to Cube.exe: ')
+cubeFile = input('EXAMPLE: C:\\Program Files (x86)\\Cube World\CubeLauncher.exe\nEnter path to Cube.exe: ')
 try:
     cubeh = open(cubeFile, 'rb')
 except:
     print('Unable to open', cubeFile)
+    input()
     quit()
 cubec = cubeh.read()
 cubeh.close()
@@ -39,6 +40,7 @@ loc = AOBScan(DRMbytes, cubec, 1)
 
 if loc == -1:
     print('Unable to crack.')
+    input()
     quit()
 
 cubec = [e for e in cubec]
@@ -50,12 +52,14 @@ try:
     outh = open(outname, 'wb')
 except:
     print('Unable to open', outname)
+    input()
     quit()
 
 try:
     outdbh = open('db.dat', 'w')
 except:
     print('Unable to open db.dat')
+    input()
     quit()
 
 #A db.dat still has to exist.
@@ -64,3 +68,6 @@ outdbh.close()
 
 outh.write(cubec)
 outh.close()
+
+print(outname, 'has been created\ndb.dat has been created')
+input()
