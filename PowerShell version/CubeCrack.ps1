@@ -49,7 +49,7 @@ If($Offset -eq -1)
 
 [Array]::Copy($CPatch, 0, $CBytes, $Offset + 5, 6)
 $Directory = Split-Path -Path $CPath
-[System.IO.File]::WriteAllBytes($Directory + "\cube.patched.exe", $CBytes)
+[System.IO.File]::WriteAllBytes($Directory + "\Cube.patched.exe", $CBytes)
 [System.IO.File]::WriteAllText($Directory + "\db.dat", "NOTAREALDRMKEY000000000000000000")
 Write-Host "Done."
 $null = $Host.UI.RawUI.ReadKey('NoEcho,IncludeKeyDown');
