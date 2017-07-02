@@ -14,10 +14,7 @@ Demo: https://www.youtube.com/watch?v=RbCCI6nIMwE
 # Technical Explanation
 
 
-
 ## CubeCrack
-
------
 
 When you log in normally, the authentication server gives you a valid db.dat for your computer. Db.dat is the file responsible for Cube World's DRM, and if it is invalid, the game shuts down at its soonest opportunity.
 
