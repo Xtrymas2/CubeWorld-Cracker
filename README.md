@@ -40,7 +40,7 @@ Cube Launcher is not very sophisticated. There is a comparison and a jump which 
 ...
 test    esi, esi
 jnz     short loc_41576F ; jmp this for free things
-push    es
+push    esi
 ...
 ```
 
