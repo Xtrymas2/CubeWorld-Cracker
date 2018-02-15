@@ -1,15 +1,12 @@
 # CubeWorld-Cracker
-CubeCrack modifies Cube World to run without a valid db.dat
+The newest version of CubeCrack simply installs the game in the same folder as the script/program. This eliminates the complexity of using the old version.
 
-LauncherCrack modifies the launcher to download the game even without an account
+Once the game is installed from the official CW download server (http://s3.amazonaws.com/picroma/cwdownload/), it changes 6 bytes to 0x90 so that the game's DRM features are disabled. The explanation for this is below.
 
-CubeLauncher.exe can be installed using https://d1bcl7tdsf48aa.cloudfront.net/download/CubeSetup3.exe or https://s3.amazonaws.com/picroma/download/CubeSetup3.exe
+Install.py requires Python 3.X to run. You can download Python 3 from https://www.python.org/
 
-CubeCrack can be used when db.dat is invalid, which will occur if you transfer the game to another computer, or if you force the launcher to download the game without an account.
+If you do not with to install Python, a py2exe version has been created as well. However, this version requires Administrator permissions to run.
 
-LauncherCrack can be used to download the game when you don't have an account
-
-Demo: https://www.youtube.com/watch?v=RbCCI6nIMwE
 
 # Technical Explanation
 
@@ -31,18 +28,4 @@ cmp     [ebp+var_B4], 10h
 ```
 
 CubeCrack removes the instruction which changes the shutdown byte. It won't shut down anymore, since the byte is 0 by default.
-
-## LauncherCrack
-
-Cube Launcher is not very sophisticated. There is a comparison and a jump which decides whether your credentials were correct. By changing one byte, LauncherCrack switches a JNE (Jump if not Equal) to JMP (Jump), so it will always download the game, regardless of whether the credentials were correct. Here is the affected code, at 0x14B46 in the executable:
-
-```nasm
-...
-test    esi, esi
-jnz     short loc_41576F ; jmp this for free things
-push    esi
-...
-```
-
-The authentication server will not give you a valid db.dat if you download the game like this, so CubeCrack will be needed to bypass it.
 
