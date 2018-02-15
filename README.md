@@ -7,6 +7,7 @@ Install.py requires Python 3.X to run. You can download Python 3 from https://ww
 
 If you do not with to install Python, a py2exe version has been created as well. However, this version requires Administrator permissions to run.
 
+Demo: https://www.youtube.com/watch?v=9htgPoilfZU
 
 # Technical Explanation
 
