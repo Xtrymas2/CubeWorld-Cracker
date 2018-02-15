@@ -5,9 +5,13 @@ Once the game is installed from the official CW download server (http://s3.amazo
 
 Install.py requires Python 3.X to run. You can download Python 3 from https://www.python.org/
 
-If you do not with to install Python, a py2exe version has been created as well. However, this version requires Administrator permissions to run.
+If you do not with to install Python, a py2exe version has been created as well. However, this version requires Administrator permissions to run, so it is not recommended over Install.py.
 
 Demo: https://www.youtube.com/watch?v=9htgPoilfZU
+
+The Python release is here: https://github.com/ChrisMiuchiz/CubeWorld-Cracker/releases/tag/v2.0-py
+
+The py2exe release is here: https://github.com/ChrisMiuchiz/CubeWorld-Cracker/releases/tag/v2.0-py2exe
 
 # Technical Explanation
 
