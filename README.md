@@ -1,17 +1,17 @@
 # CubeWorld-Cracker
-The newest version of CubeCrack simply installs the game in the same folder as the script/program. This eliminates the complexity of using the old version.
+CubeCrack includes CWDownload.py or CWDownload.exe, which downloads Cube World from the update server.
 
 Once the game is installed from the official CW download server (http://s3.amazonaws.com/picroma/cwdownload/), it changes 6 bytes to 0x90 so that the game's DRM features are disabled. The explanation for this is below.
 
-Install.py requires Python 3.X to run. You can download Python 3 from https://www.python.org/
+CWDownload.py requires Python 3.X to run. You can download Python 3 from https://www.python.org/
 
-If you do not with to install Python, a py2exe version has been created as well. However, this version requires Administrator permissions to run, so it is not recommended over Install.py.
+If you do not wish to install Python, A bundled executable version has been created.
 
-Demo: https://www.youtube.com/watch?v=9htgPoilfZU
+Demo: https://www.youtube.com/watch?v=5ydgRp4FIwI
 
-The Python release is here: https://github.com/ChrisMiuchiz/CubeWorld-Cracker/releases/tag/v2.0-py
+The Python release is here: https://github.com/ChrisMiuchiz/CubeWorld-Cracker/releases/download/v2.1/CWDownload.py
 
-The py2exe release is here: https://github.com/ChrisMiuchiz/CubeWorld-Cracker/releases/tag/v2.0-py2exe
+The bundled executable release is here: https://github.com/ChrisMiuchiz/CubeWorld-Cracker/releases/download/v2.1-exe/CWDownload.exe
 
 # Technical Explanation
 
