@@ -1,5 +1,5 @@
 # CubeWorld-Cracker
-CubeCrack includes CWDownload.py or CWDownload.exe, which downloads Cube World from the update server.
+Iincludes CWDownload.py or CWDownload.exe, which downloads Cube World from the update server.
 
 Once the game is installed from the official CW download server (http://s3.amazonaws.com/picroma/cwdownload/), it changes 6 bytes to 0x90 so that the game's DRM features are disabled. The explanation for this is below.
 
