@@ -5,13 +5,13 @@ Once the game is installed from the official CW download server (http://s3.amazo
 
 CWDownload.py requires Python 3.X to run. You can download Python 3 from https://www.python.org/
 
-If you do not wish to install Python, A bundled executable version has been created using pyinstaller.
+The advantage of using the pure Python version is that you can read the script and know exactly what it does. If you don't care, you can use the executable.
 
 Demo: https://www.youtube.com/watch?v=5ydgRp4FIwI
 
-The Python release is here: https://github.com/ChrisMiuchiz/CubeWorld-Cracker/releases/download/v2.1/CWDownload.py
+Pure Python Download: https://github.com/ChrisMiuchiz/CubeWorld-Cracker/releases/download/v2.1/CWDownload.py
 
-The bundled executable release is here: https://github.com/ChrisMiuchiz/CubeWorld-Cracker/releases/download/v2.1-exe/CWDownload.exe
+Executable Download: https://github.com/ChrisMiuchiz/CubeWorld-Cracker/releases/download/v2.2-rust/CWDownload.exe
 
 # Technical Explanation
 
